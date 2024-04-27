@@ -146,7 +146,11 @@ public class ProjectLoginPage1 {
     @FindBy(xpath = "//button[@class='action primary checkout']")
     WebElement placeorderbutton;
 
+    @FindBy(xpath = "//a[@class='action primary continue']")
+    WebElement continueshopping;
 
+    @FindBy(xpath = "//a[@class='action delete']")
+    WebElement deletecartitem;
 
 
 
@@ -205,6 +209,28 @@ public class ProjectLoginPage1 {
         action.moveToElement(menoption).perform();
         action.moveToElement(topsoption).perform();
         action.moveToElement(jacket).click().build().perform();
+        return new ProjectLoginPage1();
+    }
+
+    public ProjectLoginPage1 DeleteCartitem() throws InterruptedException
+    {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,500)");
+        Actions action = new Actions(driver);
+        action.moveToElement(productimage).click().build().perform();
+
+        //product detail page
+        js.executeScript("window.scrollBy(0,300)");
+        productsize.click();
+        prooductcolor.click();
+        addtocart.click();
+        Thread.sleep(3000);
+        js.executeScript("window.scrollBy(0,10)");
+        carticon.click();
+        Thread.sleep(2000);
+        deletecartitem.click();
+        driver.switchTo().alert().accept();
+        Thread.sleep(3000);
         return new ProjectLoginPage1();
     }
 
@@ -310,6 +336,13 @@ public class ProjectLoginPage1 {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,300)");
         placeorderbutton.click();
+        return new ProjectLoginPage1();
+    }
+
+    public ProjectLoginPage1 ContinueShopping() throws InterruptedException
+    {
+        Thread.sleep(2000);
+        continueshopping.click();
         return new ProjectLoginPage1();
     }
     public ProjectLoginPage1 CloseBrowser() throws InterruptedException {

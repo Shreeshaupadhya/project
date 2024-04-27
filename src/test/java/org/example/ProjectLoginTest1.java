@@ -53,44 +53,56 @@ public class ProjectLoginTest1 extends ProjectBase1
         projectLoginPage.SelectMenproducts();
     }
 
-    //Add to Cart - Test Case 6
+    //Delete Cart
     @Test(priority = 5)
+    public void deleteCartitem() throws InterruptedException
+    {
+        projectLoginPage.DeleteCartitem();
+    }
+
+    //Add to Cart - Test Case 6
+    @Test(priority = 6)
     public void AddtoProduct() throws InterruptedException
     {
         projectLoginPage.AddtoCart();
     }
 
     //Verify Cart - Test Case 7
-    @Test(priority = 6)
+    @Test(priority = 7)
     public void CartPage() throws InterruptedException
     {
         projectLoginPage.CartPage();
     }
 
     //Test Case 8
-    @Test(priority = 7)
+    @Test(priority = 8)
     public void ProceedCheckout() throws InterruptedException
     {
         projectLoginPage.ProceedCheckout();
     }
 
     //Test Case 9
-    @Test(priority = 8)
+    @Test(priority = 9)
     public void ShippingAddress()throws InterruptedException
     {
         projectLoginPage.ShippingAddress();
     }
 
     //Test Case 10
-    @Test(priority = 9)
+    @Test(priority = 10)
     public void PlaceOrder() throws InterruptedException
     {
         projectLoginPage.PlaceOrder();
     }
 
+    @Test(priority = 11)
+    public void ContinueShopping() throws InterruptedException
+    {
+        projectLoginPage.ContinueShopping();
+    }
 
     //Quit Browser - Test Case
-//    @Test(priority = 5)
+//    @Test(priority = 11)
 //    public void closeBrowser() throws InterruptedException{
 //        projectLoginPage.CloseBrowser();
 //    }
