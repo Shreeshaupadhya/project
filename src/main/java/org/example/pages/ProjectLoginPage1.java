@@ -315,7 +315,6 @@ public class ProjectLoginPage1 {
     public ProjectLoginPage1 CloseBrowser() throws InterruptedException {
         driver.quit();
         return new ProjectLoginPage1();
-        //test
 
     }
 
