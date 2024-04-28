@@ -1,5 +1,6 @@
 package org.example;
 
+import io.cucumber.java.sl.In;
 import org.example.base.ProjectBase1;
 import org.example.pages.HomePage;
 import org.example.pages.ProjectLoginPage1;
@@ -41,64 +42,70 @@ public class ProjectLoginTest1 extends ProjectBase1
 
 
     //Login - Test Case 4
-    @Test(priority = 3)
-    public void siteLogin() throws InterruptedException {
-        projectLoginPage.LoginUser();
-    }
+//    @Test(priority = 3)
+//    public void siteLogin() throws InterruptedException {
+//        projectLoginPage.LoginUser();
+//    }
 
     //Select Men products - Test Case 5
-    @Test(priority = 4)
-    public void selectMenproduct() throws InterruptedException
-    {
-        projectLoginPage.SelectMenproducts();
-    }
+//    @Test(priority = 4)
+//    public void selectMenproduct() throws InterruptedException
+//    {
+//        projectLoginPage.SelectMenproducts();
+//    }
+//
+//    //Delete Cart
+//    @Test(priority = 5)
+//    public void deleteCartitem() throws InterruptedException
+//    {
+//        projectLoginPage.DeleteCartitem();
+//    }
+//
+//    //Add to Cart - Test Case 6
+//    @Test(priority = 6)
+//    public void AddtoProduct() throws InterruptedException
+//    {
+//        projectLoginPage.AddtoCart();
+//    }
+//
+//    //Verify Cart - Test Case 7
+//    @Test(priority = 7)
+//    public void CartPage() throws InterruptedException
+//    {
+//        projectLoginPage.CartPage();
+//    }
+//
+//    //Test Case 8
+//    @Test(priority = 8)
+//    public void ProceedCheckout() throws InterruptedException
+//    {
+//        projectLoginPage.ProceedCheckout();
+//    }
+//
+//    //Test Case 9
+//    @Test(priority = 9)
+//    public void ShippingAddress()throws InterruptedException
+//    {
+//        projectLoginPage.ShippingAddress();
+//    }
+//
+//    //Test Case 10
+//    @Test(priority = 10)
+//    public void PlaceOrder() throws InterruptedException
+//    {
+//        projectLoginPage.PlaceOrder();
+//    }
+//
+//    @Test(priority = 11)
+//    public void ContinueShopping() throws InterruptedException
+//    {
+//        projectLoginPage.ContinueShopping();
+//    }
 
-    //Delete Cart
-    @Test(priority = 5)
-    public void deleteCartitem() throws InterruptedException
+    @Test(priority = 12)
+    public void SigninGettitle() throws InterruptedException
     {
-        projectLoginPage.DeleteCartitem();
-    }
-
-    //Add to Cart - Test Case 6
-    @Test(priority = 6)
-    public void AddtoProduct() throws InterruptedException
-    {
-        projectLoginPage.AddtoCart();
-    }
-
-    //Verify Cart - Test Case 7
-    @Test(priority = 7)
-    public void CartPage() throws InterruptedException
-    {
-        projectLoginPage.CartPage();
-    }
-
-    //Test Case 8
-    @Test(priority = 8)
-    public void ProceedCheckout() throws InterruptedException
-    {
-        projectLoginPage.ProceedCheckout();
-    }
-
-    //Test Case 9
-    @Test(priority = 9)
-    public void ShippingAddress()throws InterruptedException
-    {
-        projectLoginPage.ShippingAddress();
-    }
-
-    //Test Case 10
-    @Test(priority = 10)
-    public void PlaceOrder() throws InterruptedException
-    {
-        projectLoginPage.PlaceOrder();
-    }
-
-    @Test(priority = 11)
-    public void ContinueShopping() throws InterruptedException
-    {
-        projectLoginPage.ContinueShopping();
+        projectLoginPage.SigninGettitle();
     }
 
     //Quit Browser - Test Case

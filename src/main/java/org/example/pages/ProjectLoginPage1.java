@@ -2,6 +2,7 @@ package org.example.pages;
 
 import io.cucumber.java.be.I;
 import org.apache.poi.ss.formula.functions.T;
+import org.junit.Assert;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -152,7 +153,8 @@ public class ProjectLoginPage1 {
     @FindBy(xpath = "//a[@class='action delete']")
     WebElement deletecartitem;
 
-
+    @FindBy(xpath = "//span[@class='base']")
+    WebElement signintitle;
 
 
 
@@ -343,6 +345,16 @@ public class ProjectLoginPage1 {
     {
         Thread.sleep(2000);
         continueshopping.click();
+        return new ProjectLoginPage1();
+    }
+
+    public ProjectLoginPage1 SigninGettitle() throws InterruptedException
+    {
+        signinlink.click();
+        Thread.sleep(2000);
+        String exp_title="Customer Login";
+        String actual_title=signintitle.getText();
+        Assert.assertEquals(actual_title, exp_title);
         return new ProjectLoginPage1();
     }
     public ProjectLoginPage1 CloseBrowser() throws InterruptedException {
