@@ -30,14 +30,14 @@ public class ProjectBase1
     }
 
 
-//    public String getScreenshot(String testCaseName,WebDriver driver) throws IOException
-//    {
-//        TakesScreenshot ts = (TakesScreenshot)driver;
-//        File source = ts.getScreenshotAs(OutputType.FILE);
-//        File file = new File(System.getProperty("user.dir") + "//reports//" + testCaseName + ".png");
-//        FileUtils.copyFile(source, file);
-//        return System.getProperty("user.dir") + "//reports//" + testCaseName + ".png";
-//
-//
-//    }
+    public String getScreenshot(String testCaseName,WebDriver driver) throws IOException
+    {
+        TakesScreenshot ts = (TakesScreenshot)driver;
+        File source = ts.getScreenshotAs(OutputType.FILE);
+        File file = new File(System.getProperty("user.dir") + "//reports//" + testCaseName + ".png");
+        FileUtils.copyFile(source, file);
+        return System.getProperty("user.dir") + "//reports//" + testCaseName + ".png";
+
+
+    }
 }

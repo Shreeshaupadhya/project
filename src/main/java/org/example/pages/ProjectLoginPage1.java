@@ -156,7 +156,8 @@ public class ProjectLoginPage1 {
     @FindBy(xpath = "//span[@class='base']")
     WebElement signintitle;
 
-
+    @FindBy(xpath = "//div[@class='mage-error']")
+    WebElement invalidemailerr;
 
     //addwishlist
     @FindBy(xpath = "//a[@class='action towishlist']")
