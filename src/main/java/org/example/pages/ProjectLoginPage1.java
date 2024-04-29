@@ -358,6 +358,19 @@ public class ProjectLoginPage1 {
         Assert.assertEquals(actual_title, exp_title);
         return new ProjectLoginPage1();
     }
+
+    public ProjectLoginPage1 InvalidEmailerror() throws InterruptedException
+    {
+        signinlink.click();
+        loginemail.sendKeys("dddd");
+        loginpassword.sendKeys("Admin123*");
+        loginbutton.click();
+        Thread.sleep(2000);
+        String exp_err="Please enter a valid email address (Ex: johndoe@domain.com).";
+        String actual_err=invalidemailerr.getText();
+        Assert.assertEquals(actual_err, exp_err);
+        return new ProjectLoginPage1();
+    }
     public ProjectLoginPage1 CloseBrowser() throws InterruptedException {
         driver.quit();
         return new ProjectLoginPage1();

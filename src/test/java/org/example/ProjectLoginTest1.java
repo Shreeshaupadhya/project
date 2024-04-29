@@ -108,6 +108,12 @@ public class ProjectLoginTest1 extends ProjectBase1
         projectLoginPage.SigninGettitle();
     }
 
+    @Test(priority = 13)
+    public void InvalidEmailerror() throws InterruptedException
+    {
+        projectLoginPage.InvalidEmailerror();
+    }
+
     //Quit Browser - Test Case
 //    @Test(priority = 11)
 //    public void closeBrowser() throws InterruptedException{
