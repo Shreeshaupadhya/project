@@ -1,6 +1,7 @@
 package org.example.pages;
 
 import io.cucumber.java.be.I;
+import io.cucumber.java.en.Then;
 import org.apache.poi.ss.formula.functions.T;
 import org.junit.Assert;
 import org.openqa.selenium.JavascriptExecutor;
@@ -204,7 +205,7 @@ public class ProjectLoginPage1 {
         createaccountlink.click();
         firstname.sendKeys("Test");
         lastname.sendKeys("abc");
-        emailaddress.sendKeys("shreesha302@yahoo.com");
+        emailaddress.sendKeys("shreesha303@yahoo.com");
         password.sendKeys("Admin123*");
         confirmpassword.sendKeys("Admin123*");
         createaccountbutton.click();
@@ -264,6 +265,7 @@ public class ProjectLoginPage1 {
         carticon.click();
         Thread.sleep(2000);
         deletecartitem.click();
+        Thread.sleep(2000);
         driver.switchTo().alert().accept();
         Thread.sleep(3000);
         return new ProjectLoginPage1();
@@ -301,9 +303,9 @@ public class ProjectLoginPage1 {
 
     public ProjectLoginPage1 ShippingAddress() throws InterruptedException
     {
-
-//            JavascriptExecutor js = (JavascriptExecutor) driver;
-//            js.executeScript("window.scrollBy(0,300)");
+            Thread.sleep(2000);
+            JavascriptExecutor js = (JavascriptExecutor) driver;
+            js.executeScript("window.scrollBy(0,200)");
 //            addnewaddress.click();
 //            shippingfirstname.clear();
 //            shippingfirstname.sendKeys("firstname");
@@ -329,37 +331,37 @@ public class ProjectLoginPage1 {
 //
 //            saveaddress.click();
 //            Thread.sleep(2000);
-//            shoppingnextbutton.click();
-
-
-
-            Thread.sleep(2000);
-            shippingfirstname.clear();
-            shippingfirstname.sendKeys("firstname");
-            shippinglastname.clear();
-            shippinglastname.sendKeys("lastname");
-            shiipingcompany.sendKeys("Company");
-            shippingstreet1.sendKeys("streename1");
-            shippingstreet2.sendKeys("streetname2");
-            shippingstreet3.sendKeys("streetname3");
-            shoppingcity.sendKeys("city");
-            //stateenter.sendKeys("state");
-
-
-            Select dropdown = new Select(shoppingstate);
-            dropdown.selectByValue("2");
-
-            shoppingzipcode.sendKeys("444333");
-
-            Select dropdown1 = new Select(shoppingcountry);
-            dropdown1.selectByIndex(2);
-
-            shoppingphonenumber.sendKeys("09723847378");
-            //shoppingmethods.click();
-
-            Thread.sleep(3000);
             shoppingnextbutton.click();
-            Thread.sleep(2000);
+
+
+
+//            Thread.sleep(2000);
+//            shippingfirstname.clear();
+//            shippingfirstname.sendKeys("firstname");
+//            shippinglastname.clear();
+//            shippinglastname.sendKeys("lastname");
+//            shiipingcompany.sendKeys("Company");
+//            shippingstreet1.sendKeys("streename1");
+//            shippingstreet2.sendKeys("streetname2");
+//            shippingstreet3.sendKeys("streetname3");
+//            shoppingcity.sendKeys("city");
+//            //stateenter.sendKeys("state");
+//
+//
+//            Select dropdown = new Select(shoppingstate);
+//            dropdown.selectByValue("2");
+//
+//            shoppingzipcode.sendKeys("444333");
+//
+//            Select dropdown1 = new Select(shoppingcountry);
+//            dropdown1.selectByIndex(2);
+//
+//            shoppingphonenumber.sendKeys("09723847378");
+//            //shoppingmethods.click();
+//
+//            Thread.sleep(3000);
+//            shoppingnextbutton.click();
+//            Thread.sleep(2000);
 
         return new ProjectLoginPage1();
 
@@ -383,6 +385,9 @@ public class ProjectLoginPage1 {
 
     public ProjectLoginPage1 SigninGettitle() throws InterruptedException
     {
+        Thread.sleep(2000);
+        selectarrowforlogout.click();
+        signout.click();
         signinlink.click();
         Thread.sleep(2000);
         String exp_title="Customer Login";
