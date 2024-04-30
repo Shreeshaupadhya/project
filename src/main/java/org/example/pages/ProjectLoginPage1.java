@@ -205,7 +205,7 @@ public class ProjectLoginPage1 {
         createaccountlink.click();
         firstname.sendKeys("Test");
         lastname.sendKeys("abc");
-        emailaddress.sendKeys("shreesha303@yahoo.com");
+        emailaddress.sendKeys("shreesha304@yahoo.com");
         password.sendKeys("Admin123*");
         confirmpassword.sendKeys("Admin123*");
         createaccountbutton.click();
