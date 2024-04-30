@@ -108,14 +108,86 @@ public class ProjectLoginTest1 extends ProjectBase1
         projectLoginPage.SigninGettitle();
     }
 
-    @Test(priority = 13)
-    public void InvalidEmailerror() throws InterruptedException
+//    @Test(priority = 13)
+//    public void InvalidEmailerror() throws InterruptedException
+//    {
+//        projectLoginPage.InvalidEmailerror();
+//    }
+
+    @Test(priority = 14)
+    public void AddtoWishlist() throws InterruptedException
     {
-        projectLoginPage.InvalidEmailerror();
+        projectLoginPage.AddtoWishlist();
+    }
+
+    @Test(priority = 15)
+    public void WishList() throws InterruptedException
+    {
+        projectLoginPage.WishList();
+    }
+
+    @Test(priority = 16)
+    public void AddtoCartfromWishlist1() throws InterruptedException
+    {
+        projectLoginPage.AddtCartWishlist();
+    }
+
+    @Test(priority = 17)
+    public void MyAccount() throws InterruptedException
+    {
+        projectLoginPage.MyAccount();
+    }
+
+    @Test(priority = 18)
+    public void MyOrders() throws InterruptedException
+    {
+        projectLoginPage.MyOrders();
+    }
+
+    @Test(priority = 19)
+    public void MyDonloadproducts() throws InterruptedException
+    {
+        projectLoginPage.MyDownloadPproducts();
+    }
+
+    @Test(priority = 20)
+    public void AddressBook() throws InterruptedException
+    {
+        projectLoginPage.AddressBook();
+    }
+
+    @Test(priority = 21)
+    public void AccountInfo() throws InterruptedException
+    {
+        projectLoginPage.AccountInformation();
+    }
+
+    @Test(priority = 22)
+    public void StoredPaymentmethod() throws InterruptedException
+    {
+        projectLoginPage.StoredPayemnetmethod();
+    }
+
+    @Test(priority = 23)
+    public void MyProductreviews() throws InterruptedException
+    {
+        projectLoginPage.MyProductreviews();
+    }
+
+    @Test(priority = 24)
+    public void SearchProduct() throws InterruptedException
+    {
+        projectLoginPage.SearchProduct();
+    }
+
+    @Test(priority = 25)
+    public void SortbyOption() throws InterruptedException
+    {
+        projectLoginPage.SortBy();
     }
 
     //Quit Browser - Test Case
-//    @Test(priority = 11)
+//    @Test(priority = 26)
 //    public void closeBrowser() throws InterruptedException{
 //        projectLoginPage.CloseBrowser();
 //    }

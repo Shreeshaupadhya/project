@@ -4,6 +4,7 @@ import io.cucumber.java.be.I;
 import org.apache.poi.ss.formula.functions.T;
 import org.junit.Assert;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -160,9 +161,40 @@ public class ProjectLoginPage1 {
     WebElement invalidemailerr;
 
     //addwishlist
+
+    @FindBy(xpath = "//li[@class='product-item']")
+    WebElement wishlistitem;
+
     @FindBy(xpath = "//a[@class='action towishlist']")
     WebElement addtowishlist;
+    @FindBy(xpath = "//li[@class='link wishlist']")
+    WebElement wishlistlink;
+    @FindBy(xpath = "//button[@class='action tocart primary']")
+    WebElement addtocartfromwishlist;
 
+    @FindBy(linkText = "My Account")
+    WebElement myaccount;
+
+    @FindBy(linkText = "My Orders")
+    WebElement myorders;
+
+    @FindBy(linkText = "My Downloadable Products")
+    WebElement mydownloadableproduct;
+
+    @FindBy(linkText = "Address Book")
+    WebElement addressbook;
+
+    @FindBy(linkText = "Account Information")
+    WebElement accountinformation;
+
+    @FindBy(linkText = "Stored Payment Methods")
+    WebElement storedpaymentmethod;
+
+    @FindBy(linkText = "My Product Reviews")
+    WebElement myproductreviews;
+
+    @FindBy(xpath = "//select[@class='sorter-options']")
+    WebElement sortbyoption;
 
     public ProjectLoginPage1() {
         PageFactory.initElements(driver, this);
@@ -371,6 +403,104 @@ public class ProjectLoginPage1 {
         Assert.assertEquals(actual_err, exp_err);
         return new ProjectLoginPage1();
     }
+
+    public ProjectLoginPage1 AddtoWishlist() throws InterruptedException
+    {
+        loginemail.clear();
+        loginemail.sendKeys("shreesha302@yahoo.com");
+        loginpassword.clear();
+        loginpassword.sendKeys("Admin123*");
+        loginbutton.click();
+        Actions action = new Actions(driver);
+        action.moveToElement(menoption).perform();
+        action.moveToElement(topsoption).perform();
+        action.moveToElement(jacket).click().build().perform();
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,600)");
+        action.moveToElement(productimage).click().build().perform();
+        js.executeScript("window.scrollBy(0,500)");
+        Thread.sleep(2000);
+        addtowishlist.click();
+        return new ProjectLoginPage1();
+    }
+
+    public  ProjectLoginPage1 WishList() throws InterruptedException
+    {
+        selectarrowforlogout.click();
+        Thread.sleep(2000);
+        wishlistlink.click();
+        Thread.sleep(2000);
+        return new ProjectLoginPage1();
+    }
+
+    public ProjectLoginPage1 AddtCartWishlist() throws InterruptedException
+    {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,500)");
+        Actions action = new Actions(driver);
+        Thread.sleep(3000);
+        action.moveToElement(wishlistitem).build().perform();
+        Thread.sleep(2000);
+        addtocartfromwishlist.click();
+        js.executeScript("window.scrollBy(0,300)");
+        productsize.click();
+        prooductcolor.click();
+        addtocart.click();
+        Thread.sleep(2000);
+        js.executeScript("window.scrollBy(0,20)");
+        return new ProjectLoginPage1();
+    }
+
+    public ProjectLoginPage1 MyAccount() throws InterruptedException {
+        myaccount.click();
+        return new ProjectLoginPage1();
+    }
+
+    public ProjectLoginPage1 MyOrders() throws InterruptedException {
+        myorders.click();
+        return new ProjectLoginPage1();
+    }
+
+    public ProjectLoginPage1 MyDownloadPproducts() throws InterruptedException {
+        mydownloadableproduct.click();
+        return new ProjectLoginPage1();
+    }
+
+    public ProjectLoginPage1 AddressBook() throws InterruptedException {
+        addressbook.click();
+        return new ProjectLoginPage1();
+    }
+
+    public ProjectLoginPage1 AccountInformation() throws InterruptedException {
+        accountinformation.click();
+        return new ProjectLoginPage1();
+    }
+
+    public ProjectLoginPage1 StoredPayemnetmethod() throws InterruptedException {
+        storedpaymentmethod.click();
+        return new ProjectLoginPage1();
+    }
+
+    public ProjectLoginPage1 MyProductreviews() throws InterruptedException {
+        myproductreviews.click();
+        return new ProjectLoginPage1();
+    }
+
+    public ProjectLoginPage1 SearchProduct() throws InterruptedException {
+        searchbox.sendKeys("shirt");
+        searchbox.sendKeys(Keys.ENTER);
+        return new ProjectLoginPage1();
+    }
+
+    public ProjectLoginPage1 SortBy() throws InterruptedException {
+        Select drpSortoption = new Select(sortbyoption);
+        drpSortoption.selectByVisibleText("Product Name");
+
+
+        return new ProjectLoginPage1();
+    }
+
+
     public ProjectLoginPage1 CloseBrowser() throws InterruptedException {
         driver.quit();
         return new ProjectLoginPage1();
